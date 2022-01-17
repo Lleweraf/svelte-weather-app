@@ -24,4 +24,12 @@
   .error {
     background-color: #ff003b;
   }
+
+  @media (max-width: 480px) {
+    .toast {
+      width: 50%;
+      left: 25%;
+      top: 420px;
+    }
+  }
 </style>

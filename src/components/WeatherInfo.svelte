@@ -86,4 +86,19 @@
     display: block;
     margin-bottom: 7px;
   }
+
+  @media (max-width: 480px) {
+    .infos {
+      flex-direction: column;
+      margin: 30px 0;
+    }
+
+    .city-info {
+      margin: 20px 0 40px 0;
+    }
+
+    h1 {
+      line-height: 1;
+    }
+  }
 </style>

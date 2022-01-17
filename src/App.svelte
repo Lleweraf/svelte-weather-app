@@ -56,12 +56,17 @@
     </div>
   </div>
 
-  {#if hasError}
+  {#if hasError && !isLoading}
     <Toast {errMessage} {hasError} />
   {/if}
 
   <div class="footer">
-    <small>Coded using</small> <img src="images/Svelte_Logo.svg" alt="Svelte Logo" /><small> Svelte </small>
+    <div class="left">
+      <small><a href="https://github.com/Lleweraf/weather-app">Github Repo</a></small>
+    </div>
+    <div class="right">
+      <small>Made with <a href="https://svelte.dev/">Svelte</a> </small>
+    </div>
   </div>
 </main>
 
@@ -70,7 +75,7 @@
     position: relative;
     text-align: center;
     margin: auto;
-    width: 700px;
+    max-width: 850px;
     height: 100%;
   }
 
@@ -116,6 +121,7 @@
     border: none;
     padding: 10px 20px;
     color: #ababab;
+    text-align: center;
   }
 
   input[type='text']:focus {
@@ -124,14 +130,18 @@
 
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
   }
 
-  .footer img {
-    width: 20px;
-    display: unset;
-    margin: 0 5px;
+  .footer a {
+    color: #ff3e00;
+  }
+
+  @media (max-width: 480px) {
+    .weather-container {
+      min-height: 550px;
+    }
   }
 </style>
